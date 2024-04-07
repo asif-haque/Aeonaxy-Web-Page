@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiFillThunderbolt, AiOutlineThunderbolt } from "react-icons/ai";
+import { AiFillThunderbolt } from "react-icons/ai";
 import { completedLessons, longestStreak, streak } from "../data/data";
 
 const Streak = () => {
@@ -37,7 +37,7 @@ const Streak = () => {
         } else return { ...day, streak: false };
       })
     );
-  }, [streak]);
+  }, [activeStreak]);
   return (
     <div className="space-y-5 md:flex md:space-y-0">
       <div className="flex gap-2 items-center justify-center md:justify-start flex-1 md:border-r">
