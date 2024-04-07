@@ -12,6 +12,9 @@ import { AiFillThunderbolt } from "react-icons/ai";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  window.addEventListener("click", () => {
+    setOpen(false);
+  });
   const navItems = [
     { name: "Home", icon: <IoMdHome className="text-xl" />, to: "/" },
     {
@@ -22,7 +25,10 @@ const Navbar = () => {
     { name: "Today", icon: <CiCalendar className="text-xl" />, to: "/today" },
   ];
   return (
-    <div className="h-[10vh] max-h-[80px] flex gap-2 items-center justify-between shadow px-5 lg:px-10">
+    <div
+      className="h-[10vh] max-h-[80px] flex gap-2 items-center justify-between shadow px-5 lg:px-10"
+      onClick={(e) => e.stopPropagation()}
+    >
       <Logo />
       <ul className="md:flex hidden md:gap-3 lg:gap-7 h-full">
         {navItems.map((item) => (

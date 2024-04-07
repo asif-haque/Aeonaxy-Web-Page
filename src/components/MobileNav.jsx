@@ -4,7 +4,7 @@ import TrialButton from "./TrialButton";
 const MobileNav = ({ navItems, open }) => {
   return (
     <div
-      className={`md:hidden fixed bottom-0 left-0 border w-full px-3 py-5 ${
+      className={`md:hidden fixed z-50 bottom-0 left-0 border bg-white w-full px-3 py-5 ${
         open ? `translate-y-0` : `translate-y-full`
       } transition-all duration-500`}
     >
